@@ -15,7 +15,6 @@ from torchsummary import summary
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
-from torch.optim.lr_scheduler import ReduceLROnPlateau
 import numpy as np
 from tqdm import tqdm
 
@@ -73,8 +72,7 @@ def test(model, device, test_loader, criterion):
 def definemodel(model, device, trainloader, testloader, epochs, lr,decay=0):
   criterion = nn.CrossEntropyLoss()
   optimizer = optim.SGD(model.parameters(), lr=lr, momentum=0.9, weight_decay=decay)
-#   scheduler = StepLR(optimizer, step_size=8, gamma=0.1)
-  scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.9, patience=5, min_lr=.01)
+  scheduler = StepLR(optimizer, step_size=8, gamma=0.1)
 
   train_losses = []
   test_losses = []
@@ -87,7 +85,7 @@ def definemodel(model, device, trainloader, testloader, epochs, lr,decay=0):
     train_acc.append(acc)
     train_losses.append(loss)
 
-    scheduler.step(loss)
+    scheduler.step()
 
     acc, loss = test(model, device, testloader, criterion)
     test_acc.append(acc)
