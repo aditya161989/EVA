@@ -35,7 +35,7 @@ This is a modification of the Depth Estimation [repository](https://github.com/i
 
 ### Depth Images
 
-![](.\depth_strip.jpg)
+![](depth_strip.jpg)
 
 
 
