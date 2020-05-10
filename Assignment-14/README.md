@@ -23,19 +23,19 @@ This is a modification of the Depth Estimation [repository](https://github.com/i
 
 ### Overlay Images
 
-![](overlay_strip.jpg)
+![](.\overlay_strip.jpg)
 
 
 
 ### Mask Images
 
-![](C:\DenseDepth\mask_strip.jpg)
+![](.\mask_strip.jpg)
 
 
 
 ### Depth Images
 
-![](C:\DenseDepth\depth_strip.jpg)
+![](.\depth_strip.jpg)
 
 
 
