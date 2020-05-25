@@ -298,13 +298,13 @@ For **depth prediction**, a number of loss functions were experimented. Each one
 
 The [validation](Validate Mask.ipynb) outputs of the last epoch are as shown below. The odd rows(1,3,5) represent the ground truth and the corresponding even rows(2,4,6) represent the predictions. 
 
-![](Mask Predictions.png)
+![](Mask%20Predictions.png)
 
 ### Depth Estimation
 
 The [validation](Validate Depth.ipynb) outputs of the last epoch are as shown below. The odd rows(1,3,5) represent the ground truth and the corresponding even rows(2,4,6) represent the predictions. 
 
-![](Depth Predictions.JPG)
+![](Depth%20Predictions.JPG)
 
 #### Caution
 
