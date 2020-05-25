@@ -308,7 +308,9 @@ The [validation](Validate%20Depth.ipynb) outputs of the last epoch are as shown 
 
 #### Caution
 
-**The ground truth predictions taken from Dense Depth were not good to start with.** The author presumes that this is because his image dataset consisted of both indoor and outdoor backgrounds. Hence neither models trained on NYU nor on KITTY were able to do justice to the whole dataset. But as can be seen, the model does a respectable job on the images. However, the images in the [validation](Validate%20Depth.ipynb) notebook for depth are a little better than the one shown here due to a larger size of images.
+**The ground truth predictions taken from Dense Depth were not good to start with.** The author presumes that this is because his image dataset consisted of both indoor and outdoor backgrounds. Hence neither models trained on NYU nor on KITTY were able to do justice to the whole dataset. But as can be seen, the model does a respectable job on the images. However, the images in the [validation](Validate%20Depth.ipynb) notebook for depth are a little better than the one shown here due to a larger size of images.   
+   
+The final validation on an unknown but similar images are shown in [this](Predict.ipynb) notebook. It is a [hybrid](hybrid_model.py) model which predicts this.
 
 ## Logging
 
@@ -318,7 +320,7 @@ tqdm was not used for logging epoch outputs as it would have exceeded the IO lim
 
 ### **Google Colab**
 
-Colab was used to run the Playground notebook. However it was found to be too slow for bigger datasets, considering the initial deadline of the assignment.
+Colab was used to run the Playground notebook. However it was found to be too slow for bigger datasets, considering the initial deadline of the assignment. The author used Google APIs and Services from GCP to connect to Google drive and download required files. However for other environments `wget` proved to be easier and hence that was used.
 
 ### **AI Platform Notebooks in GCP** 
 
