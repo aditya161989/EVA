@@ -18,7 +18,7 @@ The set of 1000 images was like the Sa Re Ga Ma Pa contest for the promising cha
 
 [U-Net](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/) has been quite popular for image segmentation in the Biomedical field where precision is important. This became the natural choice for the model architecture. Two models were chosen which implemented the U-Net architecture, one with about 500k parameters and another one with about 29 million parameters. The smaller model was chosen with a hope that it would run faster and still give decent predictions.
 
-#### Lean Model
+#### Lean Model([Link](lean_model.py))
 
 ```
 ----------------------------------------------------------------
@@ -82,7 +82,7 @@ Estimated Total Size (MB): 13.11
 
 
 
-#### ResNet Backbone
+#### ResNet Backbone([Link](model.py))
 
 ```
 ----------------------------------------------------------------
@@ -296,19 +296,19 @@ For **depth prediction**, a number of loss functions were experimented. Each one
 
 ### Mask Prediction
 
-The [validation](Validate Mask.ipynb) outputs of the last epoch are as shown below. The odd rows(1,3,5) represent the ground truth and the corresponding even rows(2,4,6) represent the predictions. 
+The [validation](Validate%20Mask.ipynb) outputs of the last epoch are as shown below. The odd rows(1,3,5) represent the ground truth and the corresponding even rows(2,4,6) represent the predictions. 
 
 ![](Mask%20Predictions.png)
 
 ### Depth Estimation
 
-The [validation](Validate Depth.ipynb) outputs of the last epoch are as shown below. The odd rows(1,3,5) represent the ground truth and the corresponding even rows(2,4,6) represent the predictions. 
+The [validation](Validate%20Depth.ipynb) outputs of the last epoch are as shown below. The odd rows(1,3,5) represent the ground truth and the corresponding even rows(2,4,6) represent the predictions. 
 
 ![](Depth%20Predictions.JPG)
 
 #### Caution
 
-**The ground truth predictions taken from Dense Depth were not good to start with.** The author presumes that this is because his image dataset consisted of both indoor and outdoor backgrounds. Hence neither models trained on NYU nor on KITTY were able to do justice to the whole dataset. But as can be seen, the model does a respectable job on the images. However, the images in the [validation](Validate Depth.ipynb) notebook for depth are a little better than the one shown here due to a larger size of images.
+**The ground truth predictions taken from Dense Depth were not good to start with.** The author presumes that this is because his image dataset consisted of both indoor and outdoor backgrounds. Hence neither models trained on NYU nor on KITTY were able to do justice to the whole dataset. But as can be seen, the model does a respectable job on the images. However, the images in the [validation](Validate%20Depth.ipynb) notebook for depth are a little better than the one shown here due to a larger size of images.
 
 ## Logging
 
@@ -332,7 +332,7 @@ Rented a **Nvidia GTX 1080 Ti** to run the model on the whole dataset. This was 
 
 - To implement Serial Unet as given in [this](https://www.insticc.org/node/TechnicalProgram/vehits/2020/presentationDetails/97818) paper. It uses an architecture as given below.
 
-  ![](serial unet.png)
+  ![](serial%20unet.png)
 
   No loss function or combination of it which the author tried gave a satisfactory result for both of tasks at the same time.
 
