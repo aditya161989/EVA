@@ -270,9 +270,9 @@ The ResNet backed heavier model gave much better outputs for both the tasks but 
 
 ## Loss! Eh? Which Loss Function to Use?
 
-For **mask prediction**, two kinds of losses were experimented upon. **[BCEWithLogitsLoss](https://pytorch.org/docs/master/generated/torch.nn.BCEWithLogitsLoss.html)** and **[Dice Loss](https://arxiv.org/abs/1707.03237)** were considered. In both very small and medium datasets dice loss was more accurate than the former. 
+For **[mask prediction](Segmentation.ipynb)**, two kinds of losses were experimented upon. **[BCEWithLogitsLoss](https://pytorch.org/docs/master/generated/torch.nn.BCEWithLogitsLoss.html)** and **[Dice Loss](https://arxiv.org/abs/1707.03237)** were considered. In both very small and medium datasets dice loss was more accurate than the former. 
 
-For **depth prediction**, a number of loss functions were experimented. Each one was run for 200 epochs with a learning rate of .01 on 24 images. Thus, apart from the loss function everything else was same. Classic laboratory conditions!
+For **[depth prediction](Depth_Estimation.ipynb)**, a number of loss functions were experimented. Each one was run for 200 epochs with a learning rate of .01 on 24 images. Thus, apart from the loss function everything else was same. Classic laboratory conditions!
 
 #### L2/MSE Loss
 
